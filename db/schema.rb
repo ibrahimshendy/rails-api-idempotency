@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_19_040939) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_21_111640) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "idempotency_keys", force: :cascade do |t|
+    t.text "key"
+    t.string "method"
+    t.text "endpoint"
+    t.string "status_code"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.datetime "created_at", null: false
+    t.index ["key", "method", "endpoint"], name: "index_idempotency_keys_on_key_and_method_and_endpoint", unique: true
+    t.index ["resource_type", "resource_id", "created_at"], name: "idx_on_resource_type_resource_id_created_at_d1925733a5"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false

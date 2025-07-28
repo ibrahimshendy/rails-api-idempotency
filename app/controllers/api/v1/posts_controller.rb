@@ -11,7 +11,7 @@ class Api::V1::PostsController < Api::Controller
   def create
     @post = PostService.create attributes: post_params
 
-    render :show, status: :ok
+    render :show, status: :created
   end
 
   def update

@@ -28,6 +28,7 @@ services:
       APP_DB_USERNAME: "rails"
       APP_DB_PASSWORD: "password"
       APP_DB_PORT: 5432
+      APP_DB_TESTING_NAME: "rails_testing"
 
 volumes:
   ruby_db: {}

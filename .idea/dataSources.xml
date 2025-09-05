@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rails_development" uuid="1a593aa0-5cb0-4152-871f-5126c382e539">
+    <data-source source="LOCAL" name="idempotency_development" uuid="1a593aa0-5cb0-4152-871f-5126c382e539">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5438/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5438/idempotency_development</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
